@@ -1,0 +1,26 @@
+
+.header{
+    @include containerize(100%,100vh);
+    background-color: #{$bg_primary};
+   
+    font-family: #{$font_family_sans_serif};
+    .logo-button{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+    }
+    .hero{
+        display: flex;
+        width: 80%;
+        margin: auto;
+        justify-content: center;
+        &-left{
+             width: flex-1;
+        }
+        &-right{
+            width: flex-1;
+        }
+    }
+    
+}
+
