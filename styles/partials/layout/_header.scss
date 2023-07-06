@@ -1,26 +1,165 @@
 
 .header{
+    position: relative;
     @include containerize(100%,100vh);
-    background-color: #{$bg_primary};
-   
+    // background: radial-gradient();
+    background: radial-gradient(circle, rgb(11, 10, 58) 0%, rgba(2,0,36,1) 100%);
+
     font-family: #{$font_family_sans_serif};
     .logo-button{
          display: flex;
+         height: #{$navHeight};
          flex-direction: row;
          justify-content: space-between;
+    }
+    .navbar{
+         position: fixed;
+         right: 5%;
+         top: 50%;
+         transform: translateY(-50%);
+         -webkit-transform: translateY(-50%);
+         -moz-transform: translateY(-50%);
+         -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+         &-container{
+             @extend %navigation;
+             li{
+                 @extend %navigation-link
+             }
+         
+        }
     }
     .hero{
         display: flex;
         width: 80%;
+        height:95vh;
         margin: auto;
-        justify-content: center;
+        justify-content: space-around;
+        padding-top: 7rem;
+        @media (max-width:#{$xs}) {
+            padding-top: 0;
+            font-size: 5px;
+            width: 100%;
+        }
+        @media (max-width: #{$md}) {
+            flex-direction: column; 
+            justify-content: flex-start;
+            // align-items: flex-end;
+            font-size: 13px;
+            height: fit-content;
+            padding-top: 3rem;
+            width: 90%;
+            &-right{
+                max-width: 450px;
+                display: flex;
+                flex-direction: row;
+                align-self: flex-end;
+                justify-content: flex-start;
+                img{
+                    // background-color: black;
+                    width: 100%;
+                    margin: auto;
+                }
+            }
+            &-left{
+                max-width: 700px;
+             
+            }
+        }
+        @media (min-width:$md) {
+            padding-top: 5rem;
+             width: 90%;
+             &-right{
+                // background: white;
+                 max-width: 600px;
+                 min-width: 450px;
+                 img{
+                    width: 100%;
+                 }
+             }
+             &-left{
+                padding-top: 2rem;
+                max-width: 500px;
+               
+                
+                // background: #000;   
+           }
+        } 
+        @media (min-width:#{$lg}) {
+            width: 80%;
+             &-right{
+                // background: white;
+                 max-width: 700px;
+                 img{
+                    width: 100%;
+                 }
+             }
+             &-left{
+                max-width: 700px;
+               
+                
+                // background: #000;   
+           }
+            
+        }
         &-left{
-             width: flex-1;
+            max-width: flex-1;   
+            // background: #000;   
         }
         &-right{
-            width: flex-1;
-        }
+            display: flex;
+            max-width:flex-1 ;
+       
+        } 
+        &-text{
+            position: relative;
+            padding-top: 5px;
+            margin-bottom: 0.5rem;
+            @extend %text;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1.8rem;
+                height: 3px;
+                background: linear-gradient(90deg ,#{$clr_mulberry} , #{$clr_meadow}
+                );
+                border-radius: 12px;
+                -webkit-border-radius: 12px;
+                -moz-border-radius: 12px;
+                -ms-border-radius: 12px;
+                -o-border-radius: 12px;
     }
-    
+        }  
+        &-title{
+            margin-bottom: 0.5rem;
+            @extend %title;
+        }
+        &-subtitle{
+            @extend %subtitle;
+        }
+        &-paragraph{
+            margin-bottom: 1rem;
+            max-width: 75ch;
+            @extend %paragraph;
+        }
+        &-socials{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            li:not(:first-child){
+                margin-left: 1rem;
+            }
+            li{
+                padding-top: 0.5rem;
+            }
+        }
+     
+    }
+       
 }
+    
+
 

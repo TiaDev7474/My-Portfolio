@@ -27,11 +27,16 @@ $bg_primary:#0A0E26;
 $bg_secondary:#171135;
 $clr_meadow:#37BB8A;
 $clr_mulberry:#C525EA;
+$clr_text_dark:#E0E0E0;
 
 //fonts
-$font_family_sans_serif: 'Exo2' , -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+$font_family_sans_serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
 
-
+$navHeight:5vh;
+//breakpoints
+$lg:1200px;
+$md:900px;
+$xs:480px;
 
 
 
@@ -43,8 +48,21 @@ $font_family_sans_serif: 'Exo2' , -apple-system, BlinkMacSystemFont, "Segoe UI",
 }
 
 @mixin spaceX($x){
-    margin-left: $x +rem;
-    margin-right: $x +rem;
+    margin-left: $x +(rem);
+    margin-right: $x +(rem);
+}
+@mixin gradientText(){
+    background: linear-gradient(90deg,#{$clr_mulberry}, #{$clr_meadow} );
+    background-clip: text;
+    letter-spacing: 1px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@mixin strokeText($color){
+    -webkit-text-stroke: 0.5px $color;
+    stroke-linecap:round;
+    -webkit-text-fill-color: transparent;
+   
 }
 
 //utility
@@ -53,6 +71,20 @@ body{
     padding: 0;
     margin: 0;
 
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-family:#{$font_family_sans_serif};
 }
 
 

@@ -31,7 +31,7 @@ function minifyJs(){
 }
 
 function clean(){
-     return del(
+    return del(
         'dist/css/*'
     )
 }
@@ -57,5 +57,5 @@ function watchTask(){
 }
 
 exports.build = series(html, optimizeImage ,minifyJs, transpileSass)
-exports.default = series(clean, watchTask)
+exports.default = series( watchTask)
 exports.transpileSass = transpileSass
