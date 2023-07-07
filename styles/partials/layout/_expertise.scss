@@ -1,0 +1,105 @@
+.expertise{
+    @include containerize(100%,100vh);
+    height: fit-content;
+    // @extend %spacing-x;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin: auto;
+    &-title__stroked{
+        padding-top: 2rem ;
+        padding-bottom: 2rem ;
+        @include strokeText(#{$clr_text_light});
+        @extend %subtitle;
+        @extend %section-title;
+    }
+    &-content{
+        display: flex;
+        height: fit-content;
+        flex-direction: column;
+        justify-content: space-around;
+        // align-items: center;
+        padding-top: 2rem;
+       
+        &-left{
+            
+            max-width: fit-content;
+          
+            // background: #000;
+            .title{
+                 @extend %title;
+                 text-transform: capitalize;
+                 margin-bottom: 1.5rem ;
+            }
+            .paragraph{
+                 max-width: 85ch;
+                 margin-bottom: 1.5rem ;
+                 @extend %paragraph;
+            }
+            .btn{
+                display: inline-block;
+                @include button(#{$clr_btn_secondary});
+                color:#{$clr_text_light}
+                
+            }
+        }
+        &-right{
+            // max-width: flex-1;
+            // max-width: 100rem ;
+            // min-width: fit-content;
+            // margin-left: 20rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            @media (max-width:#{$md}) {
+                 flex-direction: column;
+                 margin-left: 0;
+                 width: 100%;
+            }
+            // @media (min-width:#{$md}) and (max-width:1400px) {
+            //     margin-left: 0rem;
+            // }
+            .cards{
+                display: flex;
+                // flex-wrap: wrap;
+                padding: 2rem;
+                @media (max-width:#{$xxl}) {
+                    flex-wrap: wrap;
+                }
+                @media (max-width:600px) {
+                    justify-content: center;
+                    padding: 0;
+                }
+            }
+            .cards-item{
+                  background-color: #{$bg_primary};
+                  padding: 1.5rem 1rem;
+                  max-width:25rem ;
+                  display: flex;
+                  border-radius: 1rem;
+                  margin: 1rem;
+                  @media (max-width:500px) {
+                      width: 100%;
+                      margin: 0
+                  }
+                 
+                  & > span {
+                     margin-right: 1rem
+                  }
+                  & > div{
+                     padding-top: 0.3rem
+                 }
+                 .title{
+                     @extend %title;
+                     font-size: 1.2rem;
+                     text-transform: uppercase;
+                     margin-bottom: 0.7rem;
+                 }
+                 .paragraph{
+                    @extend %paragraph
+                 }
+            }
+        }
+    }
+
+
+}

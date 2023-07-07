@@ -27,6 +27,7 @@ $bg_primary:#0A0E26;
 $bg_secondary:#171135;
 $clr_meadow:#37BB8A;
 $clr_mulberry:#C525EA;
+$clr_btn_secondary:#25DEEA;
 $clr_text_dark:hsl(255, 8%, 45%);
 $clr_text_light:#f2f2f2;
 
@@ -35,7 +36,10 @@ $font_family_monsterat:'Monsterat', -apple-system, BlinkMacSystemFont, "Segoe UI
 
 $navHeight:5vh;
 //breakpoints
+$xxl:1600px;
+$xl:1400px;
 $lg:1200px;
+
 $md:900px;
 $xs:480px;
 
@@ -64,8 +68,6 @@ $xs:480px;
     font-family: Arial, Helvetica, sans-serif !important;
     stroke-linecap:round;
     -webkit-text-fill-color: transparent;
-    
-   
 }
 
 //utility

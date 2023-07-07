@@ -1,0 +1,30 @@
+
+%button{
+    padding: 0.7rem 2.5rem;
+    border: 1px solid #{$clr_meadow};
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
+    -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
+    -moz-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
+    -ms-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
+    -o-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
+}
+
+
+@mixin button($bg){
+    padding: 0.7rem 2.5rem;
+    min-width: 7rem;
+    text-align: center;
+    background-color: $bg;
+    text-transform: capitalize;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
+    -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
+    -moz-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
+    -ms-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
+    -o-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
+
+}
+%button-hover{
+    background-color: #{$clr_meadow} ;
+    color: #{$clr_text_light};
+
+}
