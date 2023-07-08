@@ -466,7 +466,11 @@ dd {
     background: #000;
   }
 }
-.overlay .loader {
+.overlay-hide {
+  display: none;
+}
+
+.loader {
   width: 100%;
   height: 100vh;
   z-index: 200;
@@ -478,7 +482,7 @@ dd {
   align-items: center;
   background-color: #0A0E26;
 }
-.overlay .loader .progress_content {
+.loader .progress_content {
   width: 5rem;
   height: 1rem;
 }

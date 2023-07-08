@@ -1,17 +1,21 @@
 .overlay{
-    .loader{
-         @include containerize(100%, 100vh);
-         z-index: 200;
-         display: flex;
-         position: absolute;
-         top:0%;
-         left: 0;
-         justify-content: center;
-         align-items: center; 
-         background-color: #{$bg_primary}; 
-         .progress_content{
-              width: 5rem;
-              height: 1rem;
-         } 
-    }
+        &-hide{
+        display: none ;
+     }
+    
+}
+.loader{
+    @include containerize(100%, 100vh);
+    z-index: 200;
+    display: flex;
+    position: absolute;
+    top:0%;
+    left: 0;
+    justify-content: center;
+    align-items: center; 
+    background-color: #{$bg_primary}; 
+    .progress_content{
+         width: 5rem;
+         height: 1rem;
+    } 
 }
