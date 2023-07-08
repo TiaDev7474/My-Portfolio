@@ -27,7 +27,7 @@ function minifyJs(){
            .pipe(concat('index.min.js'))
            .pipe(terser())
            .pipe(sourcemaps.write('.'))
-           .pipe(dest('/dist/assets/js/'))      
+           .pipe(dest('dist/assets/js/'))      
 }
 
 function clean(){
@@ -50,6 +50,7 @@ function watchTask(){
        }
     });
     watch('./styles/**/*.scss', transpileSass);
+    watch('./js/**/*.js').on('change',minifyJs);
     watch('./*.html').on('change', browserSync.reload);
     watch(['./assets/images/*','./assets/icons/*']).on('change', browserSync.reload);
     watch('./js/**/*.js').on('change',browserSync.reload);
@@ -57,5 +58,5 @@ function watchTask(){
 }
 
 exports.build = series(html, optimizeImage ,minifyJs, transpileSass)
-exports.default = series( watchTask)
+exports.default = series( watchTask )
 exports.transpileSass = transpileSass
