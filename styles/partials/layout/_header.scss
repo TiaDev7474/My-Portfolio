@@ -19,7 +19,7 @@
             font-size: 14px;
             width: 95%;
          }
-         a{  
+         .btn{  
              display: inline-block;
              text-decoration: none;
              color: #{$clr-meadow};
@@ -191,7 +191,7 @@
                margin-right: 2rem;
               
             }
-            &_me a{
+            &_me .btn{
                  @extend %button;
                  background: #{$clr_mulberry};
                  cursor: pointer;
