@@ -8,7 +8,7 @@ const concat = require('gulp-concat');
 const terser = require('gulp-terser');
 const imagemin = import('gulp-imagemin');
 const del = import('del')
-
+console.log(imagemin)
 
 
 function html(){
@@ -17,8 +17,8 @@ function html(){
                
 }
 function optimizeImage(){
-    return src(['./assets/images','assets/icons'])
-           .pipe(imagemin())
+    return src('./assets/images/*')
+        //    .pipe(imagemin())
            .pipe(dest('dist/assets/images'))
 }
 function minifyJs(){

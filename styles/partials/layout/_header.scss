@@ -46,6 +46,7 @@
     }
     .navbar{
          position: fixed;
+         z-index: 100;
          right: 5%;
          top: 45%;
          transform: translateY(-50%);

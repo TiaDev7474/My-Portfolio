@@ -1,28 +1,37 @@
 .main-content{
      background: radial-gradient(circle, rgb(11, 10, 58) 0%, rgba(2,0,36,1) 100%); 
-     padding-left: 10rem;
-     padding-right: 10rem;
-    margin: auto;
-    @media (max-width:500px) {
-     padding-left: 0rem;
-     padding-right:0rem;
-    }
-    @media (max-width:1000px) {
-         padding-left: 2rem;
-         padding-right:2rem;
-    }
     
-    @media (min-width:#{$lg})  and (max-width:#{xl}){
-     padding-left: 5rem;
-     padding-right:5rem;
-    
-}
-     @media (min-width:#{$xl})  and (max-width:#{xxl}){
-          padding-left: 5rem;
-          padding-right:5rem;
-     }
 
 }
-// %spacing-x{
-     
+// .spacing{
+//      // padding-left: 10rem;
+//      // padding-right: 10rem;
+//      margin: auto;
+//      @media (max-width:500px) {
+//      padding-left: 0rem;
+//      padding-right:0rem;
+//     }
+//      @media (max-width:1000px) {
+//          padding-left: 2rem;
+//          padding-right:2rem;
+//     }
+    
+//     @media (min-width:#{$lg})  and (max-width:#{xl}){
+//      padding-left: 5rem;
+//      padding-right:5rem;
+    
 // }
+//      @media (min-width:#{$xl})  and (max-width:#{xxl}){
+//           padding-left: 5rem;
+//           padding-right:5rem;
+//      }
+// }
+
+%spacing-x{
+     padding-left: 12%;
+     padding-right: 12%;
+     @media (max-width:#{$md}) {
+          padding-left: 6%;
+          padding-right: 6%;
+     }
+}
