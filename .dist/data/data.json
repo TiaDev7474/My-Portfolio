@@ -1,9 +1,0 @@
-[
-    {
-        "name":"CONNECKTA",
-        "link":"#",
-        "github":"https://github.com",
-        "img":"Connekta.png",
-        "stacks":["MongoDB","Redis","Firebase","ExpressJs","React","Socket.io"]
-    }
-]
