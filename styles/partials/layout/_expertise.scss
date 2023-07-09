@@ -1,7 +1,6 @@
 .expertise{
     @include containerize(100%,100vh);
     height: fit-content;
-    // @extend %spacing-x;
     padding-top: 15rem;
     padding-bottom: 15rem;
     margin: auto;
@@ -39,8 +38,6 @@
         &-left{
             
             max-width: fit-content;
-          
-            // background: #000;
             .title{
                  @extend %title;
                  text-transform: capitalize;

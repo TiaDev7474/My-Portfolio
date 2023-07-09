@@ -1,10 +1,10 @@
 
 .header{
-    position: relative;
+    // position: relative;
     @include containerize(100%,100vh);
     // background: radial-gradient();
     height: fit-content;
-    background: radial-gradient(circle, rgb(11, 10, 58) 0%, rgba(2,0,36,1) 100%);
+    // background: radial-gradient(circle, rgb(11, 10, 58) 0%, rgba(2,0,36,1) 100%);
     font-family: #{$font_family_monsterat};
     .logo-button{
          display: flex;
@@ -54,6 +54,9 @@
          -moz-transform: translateY(-50%);
          -ms-transform: translateY(-50%);
          -o-transform: translateY(-50%);
+        //  @media (max-width:600px) {
+        //     right: 5%;
+        //  }
          &-container{
              @extend %navigation;
              li{

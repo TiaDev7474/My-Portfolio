@@ -43,6 +43,10 @@ function transpileSass() {
             .pipe(browserSync.stream()) 
            
 }
+function json(){
+      return src('./data/**/*.json')
+             .pipe(dest('./dist/data/'))
+}
 function watchTask(){
     browserSync.init({
        server:{
@@ -59,4 +63,5 @@ function watchTask(){
 
 exports.build = series(html, optimizeImage ,minifyJs, transpileSass)
 exports.default = series( watchTask )
+exports.json = json
 exports.transpileSass = transpileSass
