@@ -1,21 +1,21 @@
 @font-face {
   font-family: "Monsterat";
-  src: url("../../assets/fonts/Montserrat-Bold.ttf");
+  src: url("./assets/fonts/Montserrat-Bold.ttf");
   font-weight: bold;
 }
 @font-face {
   font-family: "Monsterat";
-  src: url("../../assets/fonts/Montserrat-Medium.ttf");
+  src: url("./assets/fonts/Montserrat-Medium.ttf");
   font-weight: medium;
 }
 @font-face {
   font-family: "Monsterat";
-  src: url("../../assets/fonts/Montserrat-Regular.ttf");
+  src: url("./assets/fonts/Montserrat-Regular.ttf");
   font-weight: normal;
 }
 @font-face {
   font-family: "Monsterat";
-  src: url("../../assets/fonts/Montserrat-SemiBold.ttf");
+  src: url("./assets/fonts/Montserrat-SemiBold.ttf");
   font-weight: 700;
 }
 body {

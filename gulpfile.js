@@ -47,6 +47,10 @@ function json(){
       return src('./data/**/*.json')
              .pipe(dest('./dist/data/'))
 }
+function font(){
+    return src('./assets/fonts/*')
+           .pipe(dest('./dist/assets/fonts/'))
+}
 function watchTask(){
     browserSync.init({
        server:{
@@ -64,4 +68,5 @@ function watchTask(){
 exports.build = series(html, optimizeImage ,minifyJs, transpileSass)
 exports.default = series( watchTask )
 exports.json = json
+exports.font= font
 exports.transpileSass = transpileSass
