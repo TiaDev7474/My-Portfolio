@@ -8,11 +8,15 @@
       background: radial-gradient(circle, rgb(11, 10, 58) 50%, rgba(2,0,36,1) 100%); 
 }
 %spacing-x{
-     padding-left: 12%;
-     padding-right: 12%;
+     padding-left: 8%;
+     padding-right: 8%;
      @media (max-width:#{$md}) {
-          padding-left: 6%;
-          padding-right: 6%;
+          padding-left: 5%;
+          padding-right: 5%;
+     }
+     @media (min-width:#{$md}) and (max-width:#{$xl}) {
+          padding-left: 7%;
+          padding-right: 7%;
      }
      @media (max-width:#{$xs}) {
           padding-left: 4%;

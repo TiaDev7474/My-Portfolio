@@ -69,7 +69,7 @@
         width: 80%;
         height:95vh;
         margin: auto;
-        justify-content: center;
+        justify-content: space-around;
         padding-top: 7rem;
         @media (max-width:#{$xs}) {
             padding-top: 2rem;

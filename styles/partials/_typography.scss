@@ -12,6 +12,10 @@
      @media (max-width:#{$md}) {
          font-size: 2.5rem;
      }
+     @media (max-width:1242px) {
+           font-size: 2rem;
+     
+     }
 }
 %section-title{
      font-size: 2rem;
@@ -25,6 +29,10 @@
      @media (max-width:#{$md}) {
         font-size: 2rem;
     }
+    @media (max-width:1242px) {
+     font-size: 1.5rem;
+
+}
 }
 %paragraph{
      font-size: 1rem;

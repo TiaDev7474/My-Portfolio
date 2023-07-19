@@ -60,9 +60,10 @@
             // max-width: 100rem ;
             // min-width: fit-content;
             // margin-left: 20rem;
+           
             display: flex;
             flex-direction: row;
-            justify-content: flex-end;
+            justify-content: center;
             @media (max-width:#{$md}) {
                  flex-direction: column;
                  margin-left: 0;
@@ -74,6 +75,7 @@
             .cards{
                 display: flex;
                 // flex-wrap: wrap;
+                justify-content: center;
                 padding: 2rem;
                 @media (max-width:#{$xxl}) {
                     flex-wrap: wrap;
@@ -95,6 +97,7 @@
             }
             .cards-item{
                 @extend %card;
+               
             }
         }
     }

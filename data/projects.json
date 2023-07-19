@@ -1,5 +1,6 @@
 [
     {
+        "type":"web development",
         "name":"CONNECKTA",
         "link":"#",
         "github":"https://github.com",
@@ -7,6 +8,7 @@
         "stacks":["MongoDB","Redis","Firebase","ExpressJs","React","Socket.io"]
     },
     {
+        "type":"web development",
         "name":"CONNECKTA",
         "link":"#",
         "github":"https://github.com",
@@ -14,6 +16,7 @@
         "stacks":["MongoDB","Redis","Firebase","ExpressJs","React","Socket.io"]
     },
     {
+        "type":"web development",
         "name":"CONNECKTA",
         "link":"#",
         "github":"https://github.com",
@@ -21,6 +24,7 @@
         "stacks":["MongoDB","Redis","Firebase","ExpressJs","React","Socket.io"]
     },
     {
+        "type":"web development",
         "name":"CONNECKTA",
         "link":"#",
         "github":"https://github.com",

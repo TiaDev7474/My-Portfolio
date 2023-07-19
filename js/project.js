@@ -1,15 +1,17 @@
 
+function initialize() {
     fetch('../data/projects.json')
-      .then(response => response.json())
-      .then(data => {
-           console.log(data)
-           insertData(data)
-      })
-      .catch(error => {
-         console.log(error)
-         
-      })
+    .then(response => response.json())
+    .then(data => {
+          insertData(data)
+    }) 
+    .catch(error => {
+       console.log(error)
+  })
+ }
 
+
+initialize()
 const insertData = (data) => {
       const projects = document.querySelector('.project-content')
       projects.innerHTML=''
@@ -64,3 +66,36 @@ const insertData = (data) => {
          </div>`
       });
 }
+
+const filteredData = (data , filter) =>{
+       return data.filter(data => data.type.toLower() == filter.toLower())
+}
+const filters = document.querySelectorAll('.filter-item')
+function removeAllClassFromNode(classToRemove){
+      filters.forEach(node =>{
+           node.classList.remove(classToRemove)
+      })
+}
+
+filters.forEach( filter => {
+     filter.addEventListener('click',(e)=> {
+        removeAllClassFromNode('filter-item-active')
+        e.target.classList.add('filter-item-active')
+        console.log(e.target.attributes['data'].value)
+        const filterType=e.target.attributes['data'].value
+        fetch('../data/projects.json')
+            .then(response => response.json())
+            .then(data => {
+                const filteredData = filteredData(data,filterType)
+                insertData(filteredData)
+                
+            }) 
+            .catch(err =>{
+                console.log(err)
+            })
+         
+        
+
+        
+     })
+})

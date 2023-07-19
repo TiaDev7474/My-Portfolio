@@ -1,7 +1,8 @@
 %card{
     background-color: #{$bg_primary};
-    padding: 1.5rem 1rem;
+    padding: 1.8rem 0.8rem;
     max-width:25rem ;
+    height: 11rem;
     display: flex;
     border-radius: 1rem;
     margin-right: 1rem;
@@ -10,10 +11,21 @@
     cursor: pointer;
     @media (max-width:#{$lg}) {
         flex-grow: 2;
-        margin-bottom: 1rem;
-        padding: 1rem 0.5rem;
+        // margin-bottom: 1rem;
+        // padding: 1rem 0.5rem;
        
     }
+    @media (min-width:#{$xxl}) {
+        width:50%;
+        justify-content: center;
+       
+       
+     }
+     @media (min-width:#{$md}) and (max-width:1257px) {
+        width:80%;
+       
+        
+     }
    
     & > span {
        margin-right: 1rem
