@@ -70,3 +70,4 @@ exports.default = series( watchTask )
 exports.json = json
 exports.font= font
 exports.transpileSass = transpileSass
+exports.html = html
