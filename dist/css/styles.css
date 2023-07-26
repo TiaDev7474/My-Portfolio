@@ -339,24 +339,24 @@ dd {
   background: radial-gradient(circle, rgb(11, 10, 58) 50%, rgb(2, 0, 36) 100%);
 }
 
-.portfolio, .expertise-content, .expertise-title__stroked {
+.portfolio, .skills, .expertise-content, .expertise-title__stroked {
   padding-left: 8%;
   padding-right: 8%;
 }
 @media (max-width: 900px) {
-  .portfolio, .expertise-content, .expertise-title__stroked {
+  .portfolio, .skills, .expertise-content, .expertise-title__stroked {
     padding-left: 5%;
     padding-right: 5%;
   }
 }
 @media (min-width: 900px) and (max-width: 1400px) {
-  .portfolio, .expertise-content, .expertise-title__stroked {
+  .portfolio, .skills, .expertise-content, .expertise-title__stroked {
     padding-left: 7%;
     padding-right: 7%;
   }
 }
 @media (max-width: 480px) {
-  .portfolio, .expertise-content, .expertise-title__stroked {
+  .portfolio, .skills, .expertise-content, .expertise-title__stroked {
     padding-left: 4%;
     padding-right: 4%;
   }
@@ -499,6 +499,79 @@ dd {
     background: #000;
   }
 }
+/* Style du conteneur circulaire */
+.skills {
+  width: 100wh;
+  height: fit-content;
+}
+.skills-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills-right {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border: 1px solid white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.skills .circle {
+  position: relative;
+  left: -50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.skills .logoBox {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  background-color: #0d0d0d;
+  box-shadow: 0 0 0 4px #222, 0 0 0 6px #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transform: rotate(calc(40deg * var(--i)));
+  transform-origin: 22rem;
+  z-index: 100;
+  animation: circle 5s linear infinite;
+  -webkit-animation: circle 5s linear infinite;
+  -webkit-transform: rotate(calc(40deg * var(--i)));
+  -moz-transform: rotate(calc(40deg * var(--i)));
+  -ms-transform: rotate(calc(40deg * var(--i)));
+  -o-transform: rotate(calc(40deg * var(--i)));
+}
+.skills .img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transform: rotate(calc(-40deg * var(--i)));
+}
+
 .portfolio .project-item {
   width: 350px;
   background: #0A0E26;

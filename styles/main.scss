@@ -1,11 +1,14 @@
 @import 'partials/base';
 @import 'partials/typography';
+@import 'partials/animation';
 @import 'partials/modules/navigation';
 @import "partials/modules/button";
 @import 'partials/layout/header';
 @import 'partials/layout/main';
 @import 'partials/modules/card';
 @import 'partials/layout/expertise';
+
+@import 'partials/layout/skills';
 @import 'partials/modules/project';
 @import 'partials/layout/portfolio';
 @import 'partials/modules/loader';
